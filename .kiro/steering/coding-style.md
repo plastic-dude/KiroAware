@@ -30,8 +30,8 @@
 - Constants: UPPER_SNAKE_CASE
 - Types/Interfaces: PascalCase
 
-## Quality Gates
+## Build Checks
 - `npm run typecheck` — zero errors
 - `npm run lint` — zero errors, zero warnings
 - `npm run build` — zero errors
-- `./quality-gate.sh` — all gates pass
+- `./build-check.sh` — all gates pass

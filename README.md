@@ -171,11 +171,11 @@ All data stays local in `~/.kiroaware/`:
 | Dashboard | Vite | 6.3.5 | 2026-06-15 |
 | Linting | ESLint 9 + typescript-eslint | 9.26.0 / 8.32.0 | 2026-05-02 / 2026-05-20 |
 
-## Quality Gates
+## Build Checks
 
 ```bash
 cd demo-dashboard
-./quality-gate.sh
+./build-check.sh
 ```
 
 Runs:
