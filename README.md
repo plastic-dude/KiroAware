@@ -4,7 +4,10 @@
 >
 > *by David (plastic-dude)*
 >
-> Built for Kiro Birthday Challenge Day 5: Build a Custom MCP Integration
+> Built for **Kiro Birthday Challenge Day 5: Build a Custom MCP Integration** 🎂
+>
+> *"Happy Birthday, Kiro. One year ago you were just an idea in a commit message. Today, you are the context layer between human intent and machine execution. May your MCP servers multiply, your context windows never truncate, and your completions always be exactly what we meant."*
+> — David —THE ALIEN
 
 ## What This Is
 

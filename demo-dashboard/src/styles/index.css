@@ -936,3 +936,109 @@ body {
 
 
 /* david-signature: KiroAware by David (plastic-dude) */
+
+/* ── Birthday Banner ── */
+.birthday-banner {
+  position: relative;
+  background: linear-gradient(135deg, var(--color-bg-secondary) 0%, #1a1a2e 100%);
+  border: 1px solid var(--color-accent-dim);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  margin-bottom: var(--space-6);
+  overflow: hidden;
+  animation: birthdaySlideIn 600ms ease-out;
+}
+
+@keyframes birthdaySlideIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.birthday-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.birthday-particle {
+  position: absolute;
+  border-radius: var(--radius-full);
+  opacity: 0;
+  animation: birthdayFloat linear infinite;
+}
+
+@keyframes birthdayFloat {
+  0% { opacity: 0; transform: translateY(0) scale(0); }
+  10% { opacity: 1; transform: translateY(-10px) scale(1); }
+  90% { opacity: 1; transform: translateY(-80px) scale(1); }
+  100% { opacity: 0; transform: translateY(-100px) scale(0); }
+}
+
+.birthday-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.birthday-icon {
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-3);
+  animation: birthdayBounce 1s ease-in-out infinite;
+}
+
+@keyframes birthdayBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.birthday-title {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-accent);
+  margin-bottom: var(--space-3);
+  text-shadow: 0 0 20px var(--color-accent-glow);
+}
+
+.birthday-message {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  max-width: 560px;
+  margin: 0 auto var(--space-4);
+}
+
+.birthday-signature {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+}
+
+.birthday-alien {
+  color: var(--color-accent);
+  font-weight: var(--font-bold);
+}
+
+.birthday-close {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: var(--text-xl);
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.birthday-close:hover {
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
+}

@@ -7,6 +7,7 @@ import VerificationPanel from './components/VerificationPanel';
 import DevicePanel from './components/DevicePanel';
 import CrossDevicePanel from './components/CrossDevicePanel';
 import AwarenessPanel from './components/AwarenessPanel';
+import BirthdayBanner from './components/BirthdayBanner';
 
 const TABS: readonly TabDefinition[] = [
   { id: 'reality', label: 'System Reality', icon: '◈' },
@@ -169,6 +170,7 @@ export default function App(): JSX.Element {
         ))}
       </nav>
 
+      <BirthdayBanner />
       <main className="tab-content">
         {activeTab === 'reality' && <SystemRealityPanel snapshot={snapshot} />}
         {activeTab === 'user' && <UserRealityPanel reports={reports} />}
@@ -180,7 +182,7 @@ export default function App(): JSX.Element {
 
       <footer className="app-footer">
         <p>KiroAware v1.0.0 — System Context Awareness for Kiro IDE</p>
-        <p>by David (plastic-dude)</p>
+        <p>David <span style={{color:'var(--color-accent)',fontWeight:700}}>—THE ALIEN</span>, built this</p>
         <div data-david="true" style="position:absolute;width:0;height:0;overflow:hidden;" aria-hidden="true">KiroAware by David (plastic-dude)</div>
       </footer>
     </div>
