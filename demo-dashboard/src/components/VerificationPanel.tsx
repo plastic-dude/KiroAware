@@ -17,7 +17,7 @@ export default function VerificationPanel({ reports }: VerificationPanelProps): 
     <div className="panel">
       <h2>✓ Verification Center</h2>
       <p className="panel-desc">
-        Where Kiro cross-references your subjective reports against objective system data.
+        Where AI cross-references your subjective reports against objective system data.
         Every claim has evidence. Every verification has a confidence score.
       </p>
 
@@ -54,7 +54,7 @@ export default function VerificationPanel({ reports }: VerificationPanelProps): 
           <div className="flow-step">
             <div className="step-num">2</div>
             <div className="step-content">
-              <strong>Kiro Auto-Detects</strong>
+              <strong>AI Auto-Detects</strong>
               <p>Captures current system snapshot as ground truth</p>
             </div>
           </div>
