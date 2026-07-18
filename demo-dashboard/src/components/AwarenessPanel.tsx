@@ -59,7 +59,7 @@ function buildAdaptations(snapshot: SystemSnapshot, reports: readonly UserReport
     adaptations.push({
       type: 'predictive',
       constraint: 'recurring_network_issues',
-      message: 'This device has a history of network performance issues. Kiro will proactively monitor bandwidth and suggest offline-friendly workflows.',
+      message: 'This device has a history of network performance issues. AI will proactively monitor bandwidth and suggest offline-friendly workflows.',
       confidence: 0.78,
     });
   }
@@ -71,7 +71,7 @@ function buildAdaptations(snapshot: SystemSnapshot, reports: readonly UserReport
     adaptations.push({
       type: 'predictive',
       constraint: 'recurring_thermal_issues',
-      message: 'This device often overheats during intensive tasks. Kiro will suggest staggered builds and cooling breaks.',
+      message: 'This device often overheats during intensive tasks. AI will suggest staggered builds and cooling breaks.',
       confidence: 0.82,
     });
   }
@@ -85,9 +85,9 @@ export default function AwarenessPanel({ snapshot, reports }: AwarenessPanelProp
 
   return (
     <div className="panel">
-      <h2>◐ Kiro's Awareness</h2>
+      <h2>◐ AI's Awareness</h2>
       <p className="panel-desc">
-        Everything Kiro currently knows about your system, your reports, and how it is adapting
+        Everything AI currently knows about your system, your reports, and how it is adapting
         its behavior to serve you better on this device.
       </p>
 
