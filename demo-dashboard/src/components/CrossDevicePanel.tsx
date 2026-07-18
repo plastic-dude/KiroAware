@@ -64,7 +64,7 @@ export default function CrossDevicePanel(): React.JSX.Element {
     <div className="panel">
       <h2>⇄ Cross-Device Matrix</h2>
       <p className="panel-desc">
-        KiroAware learns your patterns across every device you use. When you open Kiro on
+        AiAware learns your patterns across every device you use. When you open AI on
         any machine, it already knows what to expect and how to adapt.
       </p>
 
@@ -148,21 +148,21 @@ export default function CrossDevicePanel(): React.JSX.Element {
           <div className="adaptation-type">Device Comparison</div>
           <div className="adaptation-message">
             You typically use more powerful setups (Ryzen Workstation, 32GB RAM) for heavy work.
-            This device (MacBook Pro, 16GB) is configured for lighter tasks. Kiro will suggest
+            This device (MacBook Pro, 16GB) is configured for lighter tasks. AI will suggest
             lightweight implementations and avoid memory-heavy dependencies on this machine.
           </div>
         </div>
         <div className="adaptation-card">
           <div className="adaptation-type">Pattern Transfer</div>
           <div className="adaptation-message">
-            Your break preference (every 45 minutes) is consistent across devices. Kiro will
+            Your break preference (every 45 minutes) is consistent across devices. AI will
             remind you to take breaks regardless of which machine you are on.
           </div>
         </div>
         <div className="adaptation-card">
           <div className="adaptation-type">Predictive Adaptation</div>
           <div className="adaptation-message">
-            Based on 4 recurring thermal issues on your MacBook Pro, Kiro will proactively
+            Based on 4 recurring thermal issues on your MacBook Pro, AI will proactively
             warn you about CPU-intensive operations when temperature is elevated.
           </div>
         </div>
