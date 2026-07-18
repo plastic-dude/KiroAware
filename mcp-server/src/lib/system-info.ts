@@ -1,5 +1,5 @@
 /**
- * KiroAware — System Information Wrapper
+ * AiAware — System Information Wrapper
  * Wraps systeminformation library with our types
  */
 
