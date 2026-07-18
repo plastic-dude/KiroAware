@@ -241,8 +241,8 @@ export default function App(): React.JSX.Element {
 
       <footer className="app-footer">
         <p>AiAware v1.0.0 — System Context Awareness for AI IDE</p>
-        <p>MOKDAVONY <span style={{color:'var(--color-accent)',fontWeight:700}}>—THE ALIEN</span>, built this</p>
-        <div data-david="true" style={{position:"absolute",width:0,height:0,overflow:"hidden"}} aria-hidden="true">AiAware by MOKDAVONY — The Alien God</div>
+        <p>The Architect <span style={{color:'var(--color-accent)',fontWeight:700}}>—THE ALIEN</span>, built this</p>
+        <div data-david="true" style={{position:"absolute",width:0,height:0,overflow:"hidden"}} aria-hidden="true">AiAware by The Architect — The Alien God</div>
       </footer>
     </div>
   );
