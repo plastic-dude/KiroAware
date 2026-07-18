@@ -26,7 +26,7 @@ export default function DevicePanel({ snapshot }: DevicePanelProps): React.JSX.E
     <div className="panel">
       <h2>⌘ Device Fingerprint</h2>
       <p className="panel-desc">
-        KiroAware builds a hardware signature for each device. This fingerprint lets Kiro
+        AiAware builds a hardware signature for each device. This fingerprint lets AI
         recognize the same machine across sessions and learn its unique behavior patterns.
       </p>
 
