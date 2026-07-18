@@ -1,5 +1,5 @@
 /**
- * KiroAware — Verification Engine
+ * AiAware — Verification Engine
  * Cross-references user reports against auto-detect data
  */
 
@@ -124,7 +124,7 @@ export async function verifyReport(
     case "environmental":
     case "availability_constraint":
     case "other": {
-      // These are often purely subjective — Kiro has limited sensors
+      // These are often purely subjective — AI has limited sensors
       // Confidence stays at baseline 0.5 unless indirect evidence exists
       if (currentSnapshot.cpu.loadPercent > 90) {
         evidence.push(`system_stressed: CPU ${currentSnapshot.cpu.loadPercent}%`);
