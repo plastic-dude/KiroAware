@@ -16,7 +16,7 @@ const TABS: readonly TabDefinition[] = [
   { id: 'verify', label: 'Verification', icon: '✓' },
   { id: 'device', label: 'Device', icon: '⌘' },
   { id: 'cross', label: 'Cross-Device', icon: '⇄' },
-  { id: 'awareness', label: "Kiro's Awareness", icon: '◐' },
+  { id: 'awareness', label: "AI's Awareness", icon: '◐' },
 ] as const;
 
 function createMockSnapshot(): SystemSnapshot {
@@ -192,7 +192,7 @@ export default function App(): React.JSX.Element {
         <div className="loading-pulse">
           <div className="loading-ring" />
           <p>Initializing The Alien Observer...</p>
-          <p className="loading-sub">Connecting to KiroAware MCP</p>
+          <p className="loading-sub">Connecting to AiAware MCP</p>
         </div>
       </div>
     );
@@ -204,7 +204,7 @@ export default function App(): React.JSX.Element {
         <div className="logo">
           <span className="logo-icon">◐</span>
           <div className="logo-text">
-            <h1>KiroAware</h1>
+            <h1>AiAware</h1>
             <p>System Context Awareness</p>
           </div>
         </div>
@@ -240,9 +240,9 @@ export default function App(): React.JSX.Element {
       </main>
 
       <footer className="app-footer">
-        <p>KiroAware v1.0.0 — System Context Awareness for Kiro IDE</p>
-        <p>David <span style={{color:'var(--color-accent)',fontWeight:700}}>—THE ALIEN</span>, built this</p>
-        <div data-david="true" style={{position:"absolute",width:0,height:0,overflow:"hidden"}} aria-hidden="true">KiroAware by David (plastic-dude)</div>
+        <p>AiAware v1.0.0 — System Context Awareness for AI IDE</p>
+        <p>MOKDAVONY <span style={{color:'var(--color-accent)',fontWeight:700}}>—THE ALIEN</span>, built this</p>
+        <div data-david="true" style={{position:"absolute",width:0,height:0,overflow:"hidden"}} aria-hidden="true">AiAware by MOKDAVONY — The Alien God</div>
       </footer>
     </div>
   );
