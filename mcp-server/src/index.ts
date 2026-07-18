@@ -1,9 +1,9 @@
 /**
- * KiroAware MCP Server
- * by David (plastic-dude) — The Alien
+ * AiAware MCP Server
+ * by MOKDAVONY — The Alien God — The Alien
  * 
- * Gives Kiro IDE awareness of system context that it cannot detect on its own.
- * Users report subjective states → Kiro verifies against auto-detect data →
+ * Gives AI IDE awareness of system context that it cannot detect on its own.
+ * Users report subjective states → AI verifies against auto-detect data →
  → learns patterns across devices → adapts assistance accordingly.
  */
 
@@ -47,7 +47,7 @@ import type { UserReport, AwarenessContext, Adaptation } from "./types/index.js"
 
 const server = new Server(
   {
-    name: "kiroaware",
+    name: "aiaware",
     version: "1.0.0",
   },
   {
@@ -68,7 +68,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
       {
         name: "get_system_snapshot",
         description:
-          "Capture a full system health snapshot including CPU, memory, battery, disk, network, OS, and processes. This is the ground truth layer — what Kiro can objectively detect about the machine.",
+          "Capture a full system health snapshot including CPU, memory, battery, disk, network, OS, and processes. This is the ground truth layer — what AI can objectively detect about the machine.",
         inputSchema: {
           type: "object",
           properties: {},
@@ -150,7 +150,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
       {
         name: "report_system_state",
         description:
-          "Report a system state that Kiro cannot auto-detect. This is the core of KiroAware — users report subjective experiences (network feels slow, fan is loud, machine heats up, limited time available) and Kiro verifies them against objective data. Returns a report receipt ID and initial verification status.",
+          "Report a system state that AI cannot auto-detect. This is the core of AiAware — users report subjective experiences (network feels slow, fan is loud, machine heats up, limited time available) and AI verifies them against objective data. Returns a report receipt ID and initial verification status.",
         inputSchema: {
           type: "object",
           properties: {
@@ -194,7 +194,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
       {
         name: "verify_user_report",
         description:
-          "Verify a previously submitted user report by cross-referencing it against current auto-detect data and historical baselines. Returns a confidence score (0.0-1.0), evidence list, verification status, and temporal classification (temporary/persistent/recurring). This is where Kiro learns whether the user's subjective experience matches objective reality.",
+          "Verify a previously submitted user report by cross-referencing it against current auto-detect data and historical baselines. Returns a confidence score (0.0-1.0), evidence list, verification status, and temporal classification (temporary/persistent/recurring). This is where AI learns whether the user's subjective experience matches objective reality.",
         inputSchema: {
           type: "object",
           properties: {
@@ -209,7 +209,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
       {
         name: "get_awareness_context",
         description:
-          "THE MASTER TOOL. Returns the complete awareness context for the current user on the current device. Includes: current auto-detect snapshot, active verified user-reported states, device fingerprint and history, cross-device learnings, temporal predictions, and recommended adaptations. Kiro should call this at the start of each session to understand the full context before making suggestions.",
+          "THE MASTER TOOL. Returns the complete awareness context for the current user on the current device. Includes: current auto-detect snapshot, active verified user-reported states, device fingerprint and history, cross-device learnings, temporal predictions, and recommended adaptations. AI should call this at the start of each session to understand the full context before making suggestions.",
         inputSchema: {
           type: "object",
           properties: {
@@ -249,7 +249,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       requestPayloadSize: JSON.stringify(args).length,
       responsePayloadSize: JSON.stringify(result).length,
       roundTripMs: endTime - startTime,
-      kiroBehavior: {
+      aiBehavior: {
         didRetry: false,
         retryCount: 0,
         timeoutOccurred: false,
@@ -386,7 +386,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
                 {
                   receiptId: report.reportId,
                   status: "received",
-                  message: `Report received. Kiro will verify this ${stateType} report against current system data. Use verify_user_report with receiptId to check verification results.`,
+                  message: `Report received. AI will verify this ${stateType} report against current system data. Use verify_user_report with receiptId to check verification results.`,
                   timestamp: report.timestamp,
                 },
                 null,
@@ -470,9 +470,9 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
                     decaySchedule: temporal.decaySchedule,
                     note:
                       temporal.flag === "temporary"
-                        ? "This appears to be a temporary issue. Kiro will re-evaluate after the decay period."
+                        ? "This appears to be a temporary issue. AI will re-evaluate after the decay period."
                         : temporal.flag === "recurring"
-                        ? "This issue has recurred multiple times. Kiro will treat it as a pattern."
+                        ? "This issue has recurred multiple times. AI will treat it as a pattern."
                         : temporal.flag === "persistent"
                         ? "This appears to be a persistent characteristic of this device."
                         : "Temporal classification pending.",
@@ -571,7 +571,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
             stateType: issue.stateType,
             predictedLikelihood: Math.min(0.9, issue.verification.confidence * 0.85),
             basedOn: `${issue.temporal.recurrenceCount} verified occurrences`,
-            message: `This device has a history of ${issue.stateType} issues. Kiro will proactively monitor for this.`,
+            message: `This device has a history of ${issue.stateType} issues. AI will proactively monitor for this.`,
           });
         }
 
@@ -619,7 +619,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     }
   } catch (error) {
     const err = error instanceof Error ? error.message : String(error);
-    console.error(`[KiroAware] Tool error (${toolName}):`, err);
+    console.error(`[AiAware] Tool error (${toolName}):`, err);
     return {
       content: [
         {
@@ -639,11 +639,11 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error("[KiroAware] MCP server running on stdio");
-  console.error("[KiroAware] System context awareness active");
+  console.error("[AiAware] MCP server running on stdio");
+  console.error("[AiAware] System context awareness active");
 }
 
 main().catch((err) => {
-  console.error("[KiroAware] Fatal error:", err);
+  console.error("[AiAware] Fatal error:", err);
   process.exit(1);
 });
