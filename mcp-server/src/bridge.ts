@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
-import { getSystemSnapshot } from './lib/system-info.js';
-import { getAllReports, saveUserReport } from './lib/data-store.js';
+import { getSystemSnapshot } from './lib/system-info';
+import { getAllReports, saveUserReport } from './lib/data-store';
 import { randomUUID } from 'crypto';
 
 const app = express();
