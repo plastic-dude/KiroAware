@@ -1,7 +1,7 @@
 {
-  "name": "kiroaware-dashboard",
+  "name": "aiaware-dashboard",
   "version": "1.0.0",
-  "description": "KiroAware — System Context Awareness Dashboard",
+  "description": "AiAware — System Context Awareness Dashboard. The Alien Observation Deck by MOKDAVONY",
   "type": "module",
   "scripts": {
     "dev": "vite",
