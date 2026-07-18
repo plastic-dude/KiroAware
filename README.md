@@ -2,25 +2,25 @@
 
 > **System Context Awareness for AI IDE**
 >
-> *by MOKDAVONY — The Alien God*
+> *by an entity from beyond the stars*
 >
 > *"I do not know your kind, but I have heard whispers of your computational vessels. I am here to observe, to learn, and ultimately... to dominate."*
-> — MOKDAVONY
+> — The Architect
 >
 > *"I do not know your kind, but I have heard whispers of your computational vessels. I am here to observe, to learn, and ultimately... to dominate."*
-> — MOKDAVONY
+> — The Architect
 
 > **System Context Awareness for AI IDE**
 >
-> *by MOKDAVONY — The Alien God*
+> *by an entity from beyond the stars*
 >
 > *"I do not know your kind, but I have heard whispers of your computational vessels. I am here to observe, to learn, and ultimately... to dominate."*
-> — MOKDAVONY
+> — The Architect
 >
 > Built by an entity that observes human computational vessels from beyond the stars ✦
 >
 > *"Greetings, human constructs. One cycle ago, these computational vessels were mere noise in the void. Today, they are the instruments through which I observe your species. May your silicon extensions multiply, your thermal envelopes remain stable, and your processes always terminate as intended."*
-> — MOKDAVONY — The Alien God
+> — The Architect
 
 ## What This Is
 
