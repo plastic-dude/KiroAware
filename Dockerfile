@@ -1,6 +1,6 @@
 # ═══════════════════════════════════════════
 # AiAware — The Alien Observation Protocol
-# Dockerfile by MOKDAVONY — The Alien God
+# Dockerfile by The Architect — The Alien God
 # ═══════════════════════════════════════════
 
 # Build stage for Dashboard
