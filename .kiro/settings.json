@@ -1,15 +1,15 @@
 {
   "project": {
-    "name": "KiroAware",
-    "description": "System Context Awareness MCP Server for Kiro IDE — The Alien System",
+    "name": "AiAware",
+    "description": "System Context Awareness MCP Server for AI IDE — The Alien Observation Protocol",
     "version": "1.0.0",
-    "author": "David (plastic-dude)",
+    "author": "MOKDAVONY — The Alien God",
     "signature": "david-plastic-dude"
     "license": "MIT"
   },
   "mcp": {
     "server": {
-      "name": "kiroaware",
+      "name": "aiaware",
       "entry": "mcp-server/dist/index.js",
       "transport": "stdio",
       "tools": [
